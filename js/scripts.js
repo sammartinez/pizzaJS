@@ -24,12 +24,39 @@ Pizza.prototype.totalCost = function() {
 
     if (this.toppings !== undefined) {
     this.toppings.forEach(function(topping) {
-      orderTotal += 1;
+      costOfOrder += 1;
     });
   }
     return costOfOrder;
 }
 
 $(document).ready(function() {
+  $("#add-toppings").click(function(event) {
+    event.preventDefault();
+    $("#new-topping").append(
+      '<div class="form-group new-topping">' +
+        '<select id="toppings">' +
+          '<option value="pepperoni">Pepperoni</option>' +
+          '<option value="bacon">Bacon</option>' +
+          '<option value="sausage">Sausage</option>' +
+          '<option value="pineapple">Pineapple</option>' +
+        '</select>' +
+      '</div>')
+  });
 
+  $("form#new-order").submit(function(event) {
+    event.preventDefault();
+
+    var quantity = parseInt($("input#quantity").val());
+    var pizzaSize = $("select#sizeOfPizza").val();
+    var toppings = [];
+
+    $(".new-topping").each(function() {
+      toppings.push($("select#toppings").val());
+    });
+
+    var newPizzaOrder = new Pizza(quantity, pizzaSize, toppings);
+
+    $("#order-price").text(newPizzaOrder.totalCost());
+  });
 });

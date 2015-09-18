@@ -9,34 +9,40 @@
     </head>
     <body>
         <div class="container">
-            <h1>Pizza Shop!</h1>
-            <h3>Order all the pizzas!</h3>
-            <form id="new-order">
-                <div class="form-group">
-                    <label for="pizzaSize">Size of Pizza:</label>
-                    <select id="pizzaSize">
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="quanity">Amount:</label>
-                    <input type="number" name="quanity" value="1" id="quanity">
-                </div>
-                <div class="form-group">
-                    <button id="add-toppings" class="btn btn-info">Add another topping</button>
-                </div>
-                    <div id="topping">
-                    </div>
-                <button type="submit" class="btn btn-default">Calculate order</button>
-            </form>
+      <h1>Sam's Pizza Calculator</h1>
 
-            <div id="results">
-                <p>
-                    Your total cost for your order is $<span id="total-cost"></span>
-                </p>
-            </div>
+      <h3>Order a Pizza</h3>
+      <form id="new-order">
+        <div class="form-group">
+          <label for="sizeOfPizza">Size</label>
+          <br/>
+          <select id="sizeOfPizza">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="extra-large">Extra Large</option>
+          </select>
         </div>
+
+        <div class="form-group">
+          <label for="quantity">Amount</label>
+          <br/>
+          <input id="quantity" name="quantity" type="number" min="1" value="1">
+        </div>
+
+        <div class="form-group">
+          <button id="add-toppings" class="btn btn-danger">Add a topping</button>
+        </div>
+
+        <div id="new-topping">
+        </div>
+
+        <button type="submit" class="btn btn-danger">Calculate order</button>
+      </form>
+
+      <div id="results">
+        <p>Your total is $<span id="order-price"></span></p>
+      </div>
+    </div>
     </body>
 </html>

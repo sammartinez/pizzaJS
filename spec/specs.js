@@ -10,5 +10,12 @@ describe('Pizza', function() {
         var testPizza = new Pizza(2, "medium", "cheese");
         expect(testPizza.fullOrder()).to.equal("2 medium cheese pizza(s)");
     });
+});
 
+describe('Topping', function() {
+    it("assoicates a cost to an item", function() {
+        var testTopping = new Topping("pepperoni", 0.50);
+        expect(testTopping.toppingItem).to.equal("pepperoni");
+        expect(testTopping.toppingCost).to.equal(0.50);
+    });
 });

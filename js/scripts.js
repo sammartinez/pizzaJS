@@ -28,4 +28,14 @@ function totalCost(order) {
     return orderCost;
 }
 
-$(document).ready
+
+$(document).ready(function() {
+    event.preventDefault();
+
+    var quanity = $("input#quanity").val();
+    var pizzaSize = $("input#pizzaSize").val(); // <-- change to be a selector
+    var toppings = $("input#toppings").val();
+
+    var newPizza = new Pizza(quanity, pizzaSize, toppings);
+    $(".pizza").show();
+});

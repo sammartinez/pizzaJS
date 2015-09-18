@@ -25,17 +25,44 @@ function totalCost(order) {
         orderCost = 10 * order.quanity
         break;
     }
+
+    if(this.toppings !== "cheese") {
+        this.toppings.forEach(function(topping) {
+            orderCost += 1;
+        )};
+    }
+
     return orderCost;
 }
-
 
 $(document).ready(function() {
     event.preventDefault();
 
-    var quanity = $("input#quanity").val();
-    var pizzaSize = $("input#pizzaSize").val(); // <-- change to be a selector
-    var toppings = $("input#toppings").val();
+    $("#add-toppings").click(function(event) {
+        event.preventDefault();
+    $("#new-topping").append("<div class='form-group new-topping'>" +
+        "<select id='new-top'>" +
+        "<option value='cheese'>Cheese</option>" +
+        "<option value='pepperoni'>Pepperoni</option>" +
+        "<option value='sausage'>Sausage</option>" +
+        "<option value='bacon'>Bacon</option>" +
+        "<option value='pineapple'>Pineapple</option>" +
+        "</select>" +
+        "</div>")
+    });
 
-    var newPizza = new Pizza(quanity, pizzaSize, toppings);
-    $(".pizza").show();
+    $("form#new-order").submit(function(event) {
+        event.preventDefault();
+        var quanity = $("input#quanity").val();
+        var pizzaSize = $("select#pizzaSize").val();
+        var toppings = [];
+
+        $(".new-topping").each(function() {
+            toppings.push("select#new-top").val();
+        });
+
+        var newPizza = new Pizza(quanity, pizzaSize, toppings);
+
+        $("#total-cost").text(newPizza.totalCost(order));
+    });
 });

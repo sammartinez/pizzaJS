@@ -11,9 +11,30 @@
         <div class="container">
             <h1>Pizza Shop!</h1>
             <h3>Order all the pizzas!</h3>
-
-            <div class="pizza">
-                
+            <form id="new-order">
+                <div class="form-group">
+                    <label for="pizzaSize">Size of Pizza:</label>
+                    <select id="pizzaSize">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quanity">Amount:</label>
+                    <input type="number" name="quanity" value="1" id="quanity">
+                </div>
+                <div class="form-group">
+                    <button id="add-toppings" class="btn btn-info">Add another topping</button>
+                </div>
+                    <div class="new-topping">
+                    </div>
+                <button type="submit" class="btn btn-default">Calculate order</button>
+            </form>
+            <div class="results">
+                <p>
+                    Your total cost for your order is $<span id="total-cost"></span>
+                </p>
             </div>
         </div>
     </body>

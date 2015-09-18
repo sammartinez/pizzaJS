@@ -43,6 +43,7 @@ $(document).ready(function() {
           '<option value="bacon">Bacon</option>' +
           '<option value="sausage">Sausage</option>' +
           '<option value="pineapple">Pineapple</option>' +
+          '<option value="taco">Tacos</option>' +
         '</select>' +
       '</div>')
   });

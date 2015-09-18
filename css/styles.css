@@ -7,3 +7,12 @@
 #results {
     display: none;
 }
+
+.border-outline {
+    text-align: center;
+    text-shadow: 5px 8px 7px #005166;
+    background-color: #00CBFF;
+    border: solid;
+    padding: 4px;
+    max-width: auto;
+}

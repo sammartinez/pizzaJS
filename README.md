@@ -1,6 +1,6 @@
 # Pizza Shop
 
-##### A pizza calculator that calculates the cost of an order for pizza
+##### Allows a user to add pizza to their order based on the number of pizzas, toppings, and the size
 
 #### By Sam Martinez
 

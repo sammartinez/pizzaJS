@@ -17,27 +17,27 @@
           <label for="sizeOfPizza">Size</label>
           <br/>
           <select id="sizeOfPizza">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="extra-large">Extra Large</option>
+            <option value="small">Small $5</option>
+            <option value="medium">Medium $7</option>
+            <option value="large">Large $10</option>
+            <option value="extra-large">Extra Large $15</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="quantity">Amount</label>
           <br/>
-          <input id="quantity" name="quantity" type="number" min="1" value="1">
-        </div>
-
-        <div class="form-group">
-          <button id="add-toppings" class="btn btn-danger">Add a topping</button>
+          <input id="quantity" name="quantity" type="number" value="1">
         </div>
 
         <div id="new-topping">
         </div>
+        <div class="form-group">
+          <button id="add-toppings" class="btn btn-info">Add toppings</button>
+        </div>
 
-        <button type="submit" class="btn btn-danger">Calculate order</button>
+
+        <button type="submit" class="btn btn-default">Calculate order</button>
       </form>
 
       <div id="results">

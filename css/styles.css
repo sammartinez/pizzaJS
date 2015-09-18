@@ -1,1 +1,9 @@
-/* CSS goes here*/
+.container {
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+}
+
+#results {
+    display: none;
+}

@@ -20,8 +20,8 @@ function totalCost(order) {
         orderCost = 10 * order.quanity;
     }
 
-    if((order.pizzaSize === "small") && (order.pizzaSize === "medium") && (order.pizzaSize === "large")) {
-        orderCost = 22;
-    }
+    // if((order.pizzaSize === "small") && (order.pizzaSize === "medium") && (order.pizzaSize === "large")) {
+    //     orderCost = 22;
+    // }
     return orderCost;
 }

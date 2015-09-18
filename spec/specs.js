@@ -22,4 +22,16 @@ describe('Pizza.totalCost', function() {
         var testPizza = new Pizza(1, "small");
         expect(testPizza.totalCost()).to.equal(5);
     });
+    it("charges the customer $7 for a medium pizza", function() {
+        var testPizza = new Pizza(1, "medium");
+        expect(testPizza.totalCost()).to.equal(7);
+    });
+    it("charges the customer $10 for a large pizza", function() {
+        var testPizza = new Pizza(1, "large");
+        expect(testPizza.totalCost()).to.equal(10);
+    });
+    it("charges the customer $15 for a extra-large pizza", function() {
+        var testPizza = new Pizza(1, "extra-large");
+        expect(testPizza.totalCost()).to.equal(15);
+    });
 });
